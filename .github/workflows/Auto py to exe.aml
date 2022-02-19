@@ -1,91 +1,44 @@
 name: Push exe To Releas
-
 on: 
-
   push:
-
-    - cron: '1 * * * *'
-
+    cron: '1 * * * *'
 env:
-
   BUILD_OUTPUT: 'Utilities/macrecovery'
-
 jobs:
-
   Push-Release:
-
-    runs-on: ubuntu-latest
-
+    runs-on: windows-latest
     steps:
-
-    - uses: actions/checkout@v2
-
-      with:
-
-        fetch-depth: '5'
-
     - name: Set up Python
-
       uses: actions/setup-python@v2
-
       with:
-
         python-version: 3.9
-
     - name: Install dependencies
-
       run: |
-
         python -m pip install --upgrade pip
-
         pip install pyinstaller
-
     - name: Pack Artifacts
-
       run: |
-
-        pwd
-
-        cd Utilities/macrecovery
-
-
-        cd -
-
+        curl -OL https://github.com/acidanthera/OpenCorePkg/raw/master/Utilities/macrecovery/macrecovery.py
+        pyinstaller -F macrecovery.py
     - name: Generate Prerelease Release Notes
-
       run: |
-
         echo '### 免責聲明：:' >> ReleaseNotes.md
-
         echo '***此 exe 仅用于学习测试。***' >> ReleaseNotes.md
-
         echo '它尚未准备好供日常使用，我们不保证其可用性。' >> ReleaseNotes.md
-
         echo '如果您发现问题并且没有调试技能，请在打开问题之前提前与[QQ聊天室](https://qm.qq.com/cgi-bin/qm/qr?k=fnfunVaG-Z_occpl9QQDNaHB-B4S-ole&jump_from=webapi)联系。' >> ReleaseNotes.md
-
     - name: Delete Old Prerelease
-
       uses: dev-drprasad/delete-tag-and-release@v0.2.0
-
       with:
-
         tag_name: 'MacRecovery'
-
       env:
-
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Publish GitHub Release
-
       if: contains(github.event.head_commit.message, 'Bump version') == false
-
       uses: ncipollo/release-action@v1.8.6
-
       with:
-
         prerelease: true
-
         bodyFile: ReleaseNotes.md
-
-        artifacts: "${{ env.BUILD_OUTPUT }}/dist/*"
-
+        artifacts: "dist/*.exe"
+        tag: 'MacRecovery'
+        token: ${{ secrets.GITHUB_TOKEN }}
