@@ -1,7 +1,7 @@
 name: Push exe To Releas
 on: 
   push:
-    cron: '1 * * * *'
+    cron: '5 * * * *'
 env:
   BUILD_OUTPUT: 'Utilities/macrecovery'
 jobs:
