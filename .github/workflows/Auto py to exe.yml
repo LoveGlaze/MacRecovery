@@ -25,10 +25,13 @@ jobs:
       run: |
         curl -OL https://github.com/acidanthera/OpenCorePkg/raw/master/Utilities/macrecovery/macrecovery.py
         pyinstaller -F macrecovery.py -i macrecovery.ico
+        cd dist
+          move macrecovery.exe ..
+        cd ..
         python zip.py
     - name: Generate Prerelease Release Notes
       run: |
-        echo '### 免責聲明：:' >> ReleaseNotes.md
+        echo '### 免責聲明:' >> ReleaseNotes.md
         echo '***此程序仅用于学习测试。***' >> ReleaseNotes.md
         echo '使用前请认真阅读使用说明。' >> ReleaseNotes.md
         echo '如果您发现问题并且没有调试技能，请在打开问题之前提前与[QQ聊天室](https://qm.qq.com/cgi-bin/qm/qr?k=fnfunVaG-Z_occpl9QQDNaHB-B4S-ole&jump_from=webapi)联系。' >> ReleaseNotes.md
