@@ -27,7 +27,7 @@ jobs:
         pyinstaller -F macrecovery.py
         
         move dist/macrecovery.exe ..
-        rename -f macrecovery.exe MacRecovery.exe
+        
     - name: Generate Prerelease Release Notes
       run: |
         echo '### 免責聲明：:' >> ReleaseNotes.md
