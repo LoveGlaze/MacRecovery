@@ -38,79 +38,79 @@ echo wrong number, try it again&&goto :yes
 
 :job_1
 macrecovery.exe -b Mac-E43C1C25D4880AD6 -m 00000000000000000 -os latest download
-echo Monterey > com.apple.recovery.boot/.contentDetails
+echo Monterey Recovery > com.apple.recovery.boot/.contentDetails
 attrib +h com.apple.recovery.boot/.contentDetails
 goto job_end
 
 :job_2
 macrecovery.exe -b Mac-E43C1C25D4880AD6 -m 00000000000GDVQ00 download
-echo Monterey > com.apple.recovery.boot/.contentDetails
+echo Monterey Recovery > com.apple.recovery.boot/.contentDetails
 attrib +h com.apple.recovery.boot/.contentDetails
 goto job_end
 
 :job_3
 macrecovery.exe -b Mac-E43C1C25D4880AD6 -m 00000000000000000 -diag download
-echo Monterey > com.apple.recovery.boot/.contentDetails
+echo Monterey Recovery > com.apple.recovery.boot/.contentDetails
 attrib +h com.apple.recovery.boot/.contentDetails
 goto job_end
 
 :job_4
 macrecovery.exe -b Mac-2BD1B31983FE1663 -m 00000000000000000 download
-echo Big Sur > com.apple.recovery.boot/.contentDetails
+echo Big Sur Recovery > com.apple.recovery.boot/.contentDetails
 attrib +h com.apple.recovery.boot/.contentDetails
 goto job_end
 
 :job_5
 macrecovery.exe -b Mac-CFF7D910A743CAAF -m 00000000000PHCD00 download
-echo Catalina > com.apple.recovery.boot/.contentDetails
+echo Catalina Recovery > com.apple.recovery.boot/.contentDetails
 attrib +h com.apple.recovery.boot/.contentDetails
 goto job_end
 
 :job_6
 macrecovery.exe -b Mac-7BA5B2DFE22DDD8C -m 00000000000KXPG00 download
-echo Mojave> com.apple.recovery.boot/.contentDetails
+echo Mojave Recovery > com.apple.recovery.boot/.contentDetails
 attrib +h com.apple.recovery.boot/.contentDetails
 goto job_end
 
 :job_7
 macrecovery.exe -b Mac-7BA5B2D9E42DDD94 -m 00000000000J80300 download
-echo High Sierra > com.apple.recovery.boot/.contentDetails
+echo High Sierra Recovery > com.apple.recovery.boot/.contentDetails
 attrib +h com.apple.recovery.boot/.contentDetails
 goto job_end
 
 :job_8
 macrecovery.exe -b Mac-77F17D7DA9285301 -m 00000000000J0DX00 download
-echo Sierra > com.apple.recovery.boot/.contentDetails
+echo Sierra Recovery > com.apple.recovery.boot/.contentDetails
 attrib +h com.apple.recovery.boot/.contentDetails
 goto job_end
 
 :job_9
 macrecovery.exe -b Mac-FFE5EF870D7BA81A -m 00000000000GQRX00 download
-echo El Capitan > com.apple.recovery.boot/.contentDetails
+echo El Capitan Recovery > com.apple.recovery.boot/.contentDetails
 attrib +h com.apple.recovery.boot/.contentDetails
 goto job_end
 
 :job_10
 macrecovery.exe -b Mac-E43C1C25D4880AD6 -m 00000000000GDVW00 download
-echo Yosemite > com.apple.recovery.boot/.contentDetails
+echo Yosemite Recovery > com.apple.recovery.boot/.contentDetails
 attrib +h com.apple.recovery.boot/.contentDetails
 goto job_end
 
 :job_11
 macrecovery.exe -b Mac-F60DEB81FF30ACF6 -m 00000000000FNN100 download
-echo Mavericks > com.apple.recovery.boot/.contentDetails
+echo Mavericks Recovery > com.apple.recovery.boot/.contentDetails
 attrib +h com.apple.recovery.boot/.contentDetails
 goto job_end
 
 :job_12
 macrecovery.exe -b Mac-7DF2A3B5E5D671ED -m 00000000000F65100 download
-echo Mountain Lion > com.apple.recovery.boot/.contentDetails
+echo Mountain Lion Recovery > com.apple.recovery.boot/.contentDetails
 attrib +h com.apple.recovery.boot/.contentDetails
 goto job_end
 
 :job_13
 macrecovery.exe -b Mac-2E6FAB96566FE58C -m 00000000000F25Y00 download
-echo Lion > com.apple.recovery.boot/.contentDetails
+echo Lion Recovery > com.apple.recovery.boot/.contentDetails
 attrib +h com.apple.recovery.boot/.contentDetails
 goto job_end
 
