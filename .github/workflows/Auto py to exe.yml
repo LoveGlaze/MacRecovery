@@ -25,8 +25,8 @@ jobs:
       run: |
         curl -OL https://github.com/acidanthera/OpenCorePkg/raw/master/Utilities/macrecovery/macrecovery.py
         pyinstaller -F macrecovery.py
-        move dist/MacRecover.exe ..
-        
+        move dist/macrecover.exe ..
+        rename macrecover.exe MacRecover.exe
     - name: Generate Prerelease Release Notes
       run: |
         echo '### 免責聲明：:' >> ReleaseNotes.md
