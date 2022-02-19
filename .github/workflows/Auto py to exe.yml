@@ -1,7 +1,7 @@
 name: Push exe To Releas
 on: 
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: " */5 * * * * "
 env:
   BUILD_OUTPUT: 'Utilities/macrecovery'
 jobs:
@@ -20,6 +20,7 @@ jobs:
       run: |
         curl -OL https://github.com/acidanthera/OpenCorePkg/raw/master/Utilities/macrecovery/macrecovery.py
         pyinstaller -F macrecovery.py
+        rename macrecovery.exe MacRecover.exe
     - name: Generate Prerelease Release Notes
       run: |
         echo '### 免責聲明：:' >> ReleaseNotes.md
