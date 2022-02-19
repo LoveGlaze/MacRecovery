@@ -1,8 +1,7 @@
 name: Push exe To Releas
 on: 
   schedule:
-    - cron: '* * * * *'
-  workflow_dispatch:
+    - cron: '*/5 * * * *'
 env:
   BUILD_OUTPUT: 'Utilities/macrecovery'
 jobs:
