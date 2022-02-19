@@ -26,8 +26,6 @@ jobs:
         curl -OL https://github.com/acidanthera/OpenCorePkg/raw/master/Utilities/macrecovery/macrecovery.py
         pyinstaller -F macrecovery.py
         
-        move dist/macrecovery.exe ..
-        
     - name: Generate Prerelease Release Notes
       run: |
         echo '### 免責聲明：:' >> ReleaseNotes.md
@@ -46,6 +44,6 @@ jobs:
       uses: ncipollo/release-action@v1.8.6
       with:
         bodyFile: ReleaseNotes.md
-        artifacts: "*.exe"
+        artifacts: "dist/*.exe"
         tag: 'MacRecovery'
         token: ${{ secrets.GITHUB_TOKEN }}
