@@ -1,7 +1,7 @@
 name: Push exe To Releas
 on: 
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '55 * * * *'
 env:
   BUILD_OUTPUT: 'Utilities/macrecovery'
 jobs:
@@ -29,8 +29,8 @@ jobs:
     - name: Generate Prerelease Release Notes
       run: |
         echo '### 免責聲明：:' >> ReleaseNotes.md
-        echo '***此 exe 仅用于学习测试。***' >> ReleaseNotes.md
-        echo '它尚未准备好供日常使用，我们不保证其可用性。' >> ReleaseNotes.md
+        echo '***此程序仅用于学习测试。***' >> ReleaseNotes.md
+        echo '使用前请认真阅读使用说明。' >> ReleaseNotes.md
         echo '如果您发现问题并且没有调试技能，请在打开问题之前提前与[QQ聊天室](https://qm.qq.com/cgi-bin/qm/qr?k=fnfunVaG-Z_occpl9QQDNaHB-B4S-ole&jump_from=webapi)联系。' >> ReleaseNotes.md
     - name: Delete Old Prerelease
       uses: dev-drprasad/delete-tag-and-release@v0.2.0
