@@ -1,4 +1,6 @@
 # MacRecovery
+[![Push exe To Releas](https://github.com/LoveGlaze/MacRecovery/actions/workflows/Auto%20py%20to%20exe.yml/badge.svg?branch=master)](https://github.com/LoveGlaze/MacRecovery/actions/workflows/Auto%20py%20to%20exe.yml)
+
 MacRecovery-黑果在线安装工具
 - 将U盘格式化为fat32格式
 - 下载Release里的压缩文件，解压运行选择需要的版本
