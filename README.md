@@ -11,4 +11,5 @@ MacRecovery-黑果在线安装工具
 - 在线安装必须保证你的OC配置里能正常驱动有线或无线网卡，如无网络，请还是用完整安装镜吧。
 - 在线安装速度慢的话，可以将DNS修改为114.114.114.114
 - [联想拯救者Y7000P-2019-EFI](https://github.com/gclm/Hackintosh-LEGION-Y7000P-I7-9750H)
+![](https://cdn.jsdelivr.net/gh/LoveGlaze/images@master/MacRecovery.png)
 
