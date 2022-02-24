@@ -1,5 +1,7 @@
 # MacRecovery
-[![Push exe To Releas](https://github.com/LoveGlaze/MacRecovery/actions/workflows/Auto%20py%20to%20exe.yml/badge.svg?branch=master)](https://github.com/LoveGlaze/MacRecovery/actions/workflows/Auto%20py%20to%20exe.yml)
+- 项目来自[OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)官方文档，编译py文件为exe，参数写入bat文件方便使用。
+
+- [![Push exe To Releas](https://github.com/LoveGlaze/MacRecovery/actions/workflows/Auto%20py%20to%20exe.yml/badge.svg?branch=master)](https://github.com/LoveGlaze/MacRecovery/actions/workflows/Auto%20py%20to%20exe.yml)
 
 MacRecovery-黑果在线安装工具
 - 将U盘格式化为fat32格式(也可在硬盘建立一个800MB的Fat32格式分区)
