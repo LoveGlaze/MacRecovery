@@ -10,11 +10,11 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Get local warehouse
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         fetch-depth: '5'
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: 3.9
     - name: Install dependencies
@@ -36,7 +36,7 @@ jobs:
         echo '使用前请认真阅读使用说明。' >> ReleaseNotes.md
         echo '如果您发现问题并且没有调试技能，请在打开问题之前提前与[QQ聊天室](https://qm.qq.com/cgi-bin/qm/qr?k=fnfunVaG-Z_occpl9QQDNaHB-B4S-ole&jump_from=webapi)联系。' >> ReleaseNotes.md
     - name: Delete Old Prerelease
-      uses: dev-drprasad/delete-tag-and-release@v0.2.0
+      uses: dev-drprasad/delete-tag-and-release@v1.1
       with:
         tag_name: 'MacRecovery'
       env:
@@ -44,7 +44,7 @@ jobs:
 
     - name: Publish GitHub Release
       if: contains(github.event.head_commit.message, 'Bump version') == false
-      uses: ncipollo/release-action@v1.8.6
+      uses: ncipollo/release-action@v1.14.0
       with:
         bodyFile: ReleaseNotes.md
         artifacts: "*.zip"
